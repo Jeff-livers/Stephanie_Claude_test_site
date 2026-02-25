@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Streamline Home Organizing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <div class="page-header">
+    <h1>Contact</h1>
+  </div>
+
+
+  <!-- ===================== INTRO ===================== -->
+  <div class="contact-intro">
+    <div class="container">
+      <h2 class="section-title">Schedule Your Consultation</h2>
+      <p>Have a project in mind or simply not sure where to start? Reach out to begin the conversation. Every inquiry is handled personally, and we'll explore how thoughtful organization can support your space, lifestyle, and goals.</p>
+    </div>
+  </div>
+
+
+  <!-- ===================== FORM ===================== -->
+  <section class="contact-form-section" id="form">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="form-group">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+
+          <p class="checkbox-label">What Are We Organizing?</p>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox"> Kitchen</label>
+            <label class="checkbox-item"><input type="checkbox"> Playroom</label>
+            <label class="checkbox-item"><input type="checkbox"> Moving</label>
+            <label class="checkbox-item"><input type="checkbox"> Pantry</label>
+            <label class="checkbox-item"><input type="checkbox"> Bathroom</label>
+            <label class="checkbox-item"><input type="checkbox"> Seasonal</label>
+            <label class="checkbox-item"><input type="checkbox"> Closet</label>
+            <label class="checkbox-item"><input type="checkbox"> Garage</label>
+            <label class="checkbox-item"><input type="checkbox"> Bedroom</label>
+            <label class="checkbox-item"><input type="checkbox"> Office</label>
+            <label class="checkbox-item"><input type="checkbox"> Small Biz</label>
+            <label class="checkbox-item"><input type="checkbox"> Other</label>
+          </div>
+
+          <textarea placeholder="Message"></textarea>
+
+          <div>
+            <button type="submit" class="btn-green" id="submitBtn">Submit</button>
+          </div>
+        </div>
+
+        <div class="contact-photo">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&auto=format&fit=crop" alt="Organized home interior">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== AREAS ===================== -->
+  <section class="areas">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 48px;">Areas We Serve</h2>
+      <div class="areas-grid">
+        <div class="areas-map">
+          📍 Bay Area, CA<br>
+          <small style="font-size:14px; opacity:0.7;">Replace with your Google Maps embed</small>
+        </div>
+        <ul class="areas-list">
+          <li>Tiburon / Belvedere</li><li>Napa</li>
+          <li>San Anselmo</li><li>Sonoma</li>
+          <li>Ross</li><li>Healdsburg</li>
+          <li>Mill Valley</li><li>Piedmont</li>
+          <li>Palo Alto</li><li>Orinda</li>
+          <li>Atherton</li><li>Lafayette</li>
+          <li>Woodside</li><li>Moraga</li>
+          <li>Los Altos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="foot-placeholder"></div>
+
+  <script src="components.js"></script>
+  <script>
+    /* Basic form feedback — swap for Formspree or similar */
+    document.getElementById('submitBtn').addEventListener('click', function () {
+      const name  = document.querySelector('input[type="text"]').value.trim();
+      const email = document.querySelector('input[type="email"]').value.trim();
+      if (!name || !email) { alert('Please fill in your name and email.'); return; }
+      this.textContent = 'Sent!';
+      this.style.background = '#2d5c47';
+      this.disabled = true;
+    });
+  </script>
+</body>
+</html>
